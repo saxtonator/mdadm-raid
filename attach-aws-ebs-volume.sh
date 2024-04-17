@@ -41,6 +41,7 @@ STEP5_3
 : <<'STEP5_4'
 To ensure the volume is mounted automatically after a reboot, edit the /etc/fstab file and add the following line:
 Make sure to replace /dev/xvdf with your device name if it's different.
+STEP5_4
 # /dev/xvdf /mnt/myvolume ext4 defaults,nofail 0 2 # only mount this volume if you're not creating the RAID
 # Following these steps, you'll have successfully attached and configured a new EBS volume on your EC2 instance running Amazon Linux.
 
