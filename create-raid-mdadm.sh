@@ -38,9 +38,9 @@ sudo blkid /dev/md0
 Then, add the following line to /etc/fstab using your favorite editor (like nano or vim). Replace your-uuid with the UUID you obtained from the blkid command.
 STEP7_1
 : <<'STEP8'
-UUID=your-uuid /mnt/raid0 ext4 defaults,nofail 0 2 # don't forget to update this to match your RAID UUID.
 Step 8: Ensure the RAID Array Assembles on Boot
 To ensure the RAID array assembles automatically on boot, add the array details to the mdadm configuration file.
+UUID=your-uuid /mnt/raid0 ext4 defaults,nofail 0 2 # don't forget to update this to match your RAID UUID.
 STEP8
 echo 'DEVICE /dev/xvdf /dev/xvdg' | sudo tee -a /etc/mdadm.conf # update to match your volume name and details.
 sudo mdadm --detail --scan | sudo tee -a /etc/mdadm.conf
