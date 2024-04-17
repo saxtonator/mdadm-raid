@@ -27,9 +27,9 @@ sudo mkfs.ext4 /dev/md0
 Step 6: Mount the RAID Array
 Create a directory to mount the RAID array and then mount it:
 STEP6
-: <<'STEP7'
 sudo mkdir /mnt/raid0
 sudo mount /dev/md0 /mnt/raid0
+: <<'STEP7'
 Step 7: Update /etc/fstab for Automatic Mounting
 To ensure the RAID array mounts automatically at boot, you need to add an entry to /etc/fstab. First, find the UUID of the RAID array:
 STEP7
